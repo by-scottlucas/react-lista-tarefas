@@ -1,0 +1,150 @@
+@import url('https://fonts.cdnfonts.com/css/roboto');
+
+body {
+    font-family: 'Roboto', sans serif;
+    background-color: #222435;
+}
+
+*:focus {
+    outline: none;
+}
+
+h1 {
+    font-weight: 900;
+    color: #fff;
+    text-align: center;
+}
+
+form {
+    position: relative;
+    width: 600px;
+    height: 60px;
+    display: flex;
+    margin: 30px auto;
+    margin-bottom: 60px;
+}
+
+input {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    border: none;
+    background-color: #fff;
+    padding-left: 30px;
+    font-size: 1rem;
+    border-radius: 6px;
+    outline: none;
+}
+
+.add {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 25px;
+    height: 62px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: steelblue;
+}
+
+.add:hover {
+    background-color: #286494;
+}
+
+.lista-tarefas {
+    text-align: center;
+    margin: auto;
+    width: 600px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #286494;
+    color: #fff;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.item:hover {
+    background-color: steelblue;
+}
+
+.item span {
+    text-align: start;
+    width: 100%;
+    margin-right: 10px;
+    padding: 10px 15px;
+}
+
+.item.completo{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #04243e;
+    opacity: 0.3;
+}
+
+.item.completo span {
+    width: 100%;
+    margin-right: 10px;
+    padding: 10px 15px;
+    text-decoration: line-through;
+}
+
+.del {
+    color: #ff004c;
+    cursor: pointer;
+    padding: 14px;
+    border: none;
+    background: transparent;
+}
+.del:hover {
+    color: #fff;
+    background: #ff004c;
+}
+
+.delete-all {
+    cursor: pointer;
+    border-radius: 4px;
+    color: #ff004c;
+    font-weight: bold;
+    padding: 14px;
+    border: 1px solid #ff004c;
+    background: transparent;
+    margin-top: 30px;
+}
+
+.delete-all:hover {
+    color: #fff;
+    background-color: #ff004c;
+}
+
+.icone {
+    margin: 0 auto;
+    max-width: 60%;
+}
+
+@media screen and (max-width: 900px) {
+
+    form {
+        width: 100%;
+    }
+
+    .lista-tarefas {
+        width: 100%;
+    }
+
+    .icone {
+        width: 100%;
+    }
+
+}
