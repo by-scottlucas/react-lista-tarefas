@@ -5,53 +5,52 @@ body {
     background-color: #222435;
 }
 
-*:focus {
-    outline: none;
-}
-
 h1 {
+    font-size: 2.4rem;
     font-weight: 900;
     color: #fff;
     text-align: center;
 }
 
 form {
-    position: relative;
     width: 600px;
     height: 60px;
     display: flex;
     margin: 30px auto;
-    margin-bottom: 60px;
+    position: relative;
+    margin-bottom: 40px;
 }
 
 input {
     display: flex;
+    align-items: center;
     width: 100%;
     height: 60px;
     border: none;
     background-color: #fff;
-    padding-left: 30px;
+    padding-left: 16px;
     font-size: 1rem;
-    border-radius: 6px;
+    border-radius: 4px;
     outline: none;
 }
 
-.add {
+.btn-add {
+    font-size: .9rem;
     position: absolute;
     top: 0;
     right: 0;
     border: none;
     color: #fff;
     cursor: pointer;
-    padding: 10px 25px;
+    padding: 10px 24px;
     height: 62px;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-    background-color: steelblue;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: #3a88ff;
 }
 
-.add:hover {
-    background-color: #286494;
+.btn-add:hover {
+    background-color: #015ce6;
 }
 
 .lista-tarefas {
@@ -64,33 +63,37 @@ input {
 }
 
 .item {
+    border-radius: 4px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    border: 1px solid #286494;
+    border: 1px solid #346085;
     color: #fff;
     margin-bottom: 10px;
     cursor: pointer;
 }
 
 .item:hover {
-    background-color: steelblue;
+    font-weight: 900;
+    color: #fff;
+    background-color: #346085;
 }
 
 .item span {
     text-align: start;
     width: 100%;
     margin-right: 10px;
-    padding: 10px 15px;
+    padding: 10px 16px;
 }
 
-.item.completo{
+.item.completo {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
     cursor: pointer;
     border: none;
-    background-color: #04243e;
-    opacity: 0.3;
+    background-color: #346085;
+    opacity: 0.2;
 }
 
 .item.completo span {
@@ -101,18 +104,24 @@ input {
 }
 
 .del {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
     color: #ff004c;
     cursor: pointer;
     padding: 14px;
     border: none;
     background: transparent;
 }
+
 .del:hover {
     color: #fff;
     background: #ff004c;
 }
 
 .delete-all {
+    font-size: .9rem;
+    width: 100%;
     cursor: pointer;
     border-radius: 4px;
     color: #ff004c;
@@ -120,7 +129,7 @@ input {
     padding: 14px;
     border: 1px solid #ff004c;
     background: transparent;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .delete-all:hover {
@@ -129,7 +138,7 @@ input {
 }
 
 .icone {
-    margin: 0 auto;
+    margin-top: 20px;
     max-width: 60%;
 }
 

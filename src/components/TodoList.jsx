@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Icon from "../src/assets/icon.png";
+import Icon from "../assets/icon.png";
 import './TodoList.css';
+import { FaTrashAlt } from "react-icons/fa";
 
 function TodoList() {
 
@@ -57,7 +58,7 @@ function TodoList() {
 
                 <input id="input-entrada" type="text" placeholder="Adicione uma tarefa" value={novoItem} onChange={(e) => { setNovoItem(e.target.value) }} />
 
-                <button type="submit" className="add">Add</button>
+                <button type="submit" className="btn-add">Add</button>
 
             </form>
 
@@ -75,14 +76,20 @@ function TodoList() {
 
                                     <span onClick={() => { atualizarEstado(index) }}>{item.text}</span>
 
-                                    <button onClick={() => { deletarTarefa(index) }} className="del">Deletar</button>
+                                    <button onClick={() => { deletarTarefa(index) }} className="del">
+                                        <FaTrashAlt />
+                                    </button>
 
                                 </div>
                             ))
                     }
 
                     {
-                        lista.length > 0 && <button onClick={() => { deletarTarefas() }} className="delete-all">Deletar todas</button>
+                        lista.length > 0
+                        &&
+                        <button onClick={() => { deletarTarefas() }} className="delete-all">
+                            Deletar todas
+                        </button>
                     }
 
                 </div>
