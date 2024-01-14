@@ -3,7 +3,7 @@ import Icon from "../assets/icon.png";
 import './TodoList.css';
 import { FaTrashAlt } from "react-icons/fa";
 
-function TodoList() {
+export default function TodoList() {
 
     const listaStorage = localStorage.getItem('Lista');
 
@@ -17,6 +17,7 @@ function TodoList() {
     }, [lista]);
 
     function addTarefa(form) {
+
         form.preventDefault();
 
         if (!novoItem) {
@@ -31,6 +32,7 @@ function TodoList() {
     }
 
     function atualizarEstado(index) {
+
         const listaAux = [...lista];
 
         listaAux[index].isCompleted = !listaAux[index].isCompleted;
@@ -38,6 +40,7 @@ function TodoList() {
     }
 
     function deletarTarefa(index) {
+
         const listaAux = [...lista];
 
         listaAux.splice(index, 1);
@@ -50,7 +53,7 @@ function TodoList() {
 
 
     return (
-        <div>
+        <div className="container">
 
             <h1>Lista de Tarefas</h1>
 
@@ -67,9 +70,9 @@ function TodoList() {
                 <div>
 
                     {
-                        lista.length < 1 ?
+                        lista.length < 1 ? (
                             <img className="icone" src={Icon} />
-                            :
+                        ) : (
                             lista.map((item, index) => (
 
                                 <div key={index} className={item.isCompleted ? "item completo" : "item"}>
@@ -82,14 +85,17 @@ function TodoList() {
 
                                 </div>
                             ))
+                        )
+
                     }
 
                     {
-                        lista.length > 0
-                        &&
-                        <button onClick={() => { deletarTarefas() }} className="delete-all">
-                            Deletar todas
-                        </button>
+                        lista.length > 0 && (
+                            <button onClick={() => { deletarTarefas() }} className="delete-all">
+                                Deletar todas
+                            </button>
+                        )
+
                     }
 
                 </div>
@@ -99,5 +105,3 @@ function TodoList() {
         </div>
     )
 }
-
-export default TodoList;

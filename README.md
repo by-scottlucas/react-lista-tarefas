@@ -22,3 +22,8 @@ npm run dev
 * JavaScript
 * React JS
 * Vite
+
+## Imagem do Projeto
+
+![Thumb](./src/assets/thumb.png)
+![Thumb](./src/assets/thumb2.png)
